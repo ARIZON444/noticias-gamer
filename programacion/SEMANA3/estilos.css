@@ -1,0 +1,118 @@
+/* 0) reset mínimo */
+* { box-sizing: border-box; }
+
+/* 1) cuerpo y fondo */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #8ca5ac;
+  color: #222;
+}
+
+/* 2) contenedor centrado y ancho máximo */
+.contenedor {
+  max-width: 1200px;    /* ancho máximo del contenido */
+  margin: 0 auto;       /* centra horizontalmente */
+  padding: 20px;        /* espacio interno */
+  background: #fff;     /* fondo del bloque de contenido */
+  border-radius: 6px;   /* opcional, se ve bonito */
+}
+
+/* 3) títulos con Playfair Display (usando Google Fonts o @font-face si los hosteas localmente) */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0.5em 0;
+  text-align: center;   /* centra los títulos */
+  line-height: 1.1;
+  color: #1d2b2b;
+}
+
+h1 { font-size: 28px; font-weight: 700; }
+h2 { font-size: 24px; font-weight: 400; font-style: italic; }
+h3 { font-size: 20px; font-weight: 400; }
+
+/* 4) párrafos y texto general */
+p {
+  margin: 0 0 1em 0;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 5) reglas generales para imágenes: nunca saldrán del contenedor y se centran */
+.contenedor img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 18px auto;   /* centra la imagen y separa */
+}
+
+/* 6) imagen principal (feature) */
+.img-feature {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 7) galería / miniaturas uniformes */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.img-thumb {
+  width: 100%;
+  height: 220px;       /* altura fija para uniformidad */
+  object-fit: cover;   /* recorta sin deformar */
+  border-radius: 6px;
+  display: block;
+}
+
+/* 8) blockquote (citas) */
+blockquote {
+  margin: 1.2em 0;
+  padding-left: 1em;
+  border-left: 4px solid #dcdcdc;
+  color: #444;
+  font-style: italic;
+  background: #fafafa;
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+
+/* 9) referencia bibliográfica y enlaces */
+.referencia {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.referencia a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.referencia a:hover,
+.referencia a:focus {
+  text-decoration: underline;
+}
+
+/* 10) ajustes responsivos */
+@media (max-width: 900px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  .img-thumb { height: 180px; }
+}
+
+@media (max-width: 600px) {
+  .contenedor { padding: 16px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; font-style: normal; }
+  .img-thumb { height: 140px; }
+}
